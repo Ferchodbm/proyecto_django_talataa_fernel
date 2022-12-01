@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Detalle Pedido</h1>
+<div> 
+    <form action="/pedido/" method="GET">
+        <button>
+            Atras
+        </button>
+    </form>
+</div>
+
+    <h1>Cliente: {{pedido.nombre}} {{pedido.apellido}}</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            editar
+        </button>
+    </form>
+
+    <form action="{% url 'eliminarPedido' pedido.id %}" method="POST">
+        {% csrf_token %}
+        <button>
+            eliminar
+        </button>
+    </form>
+
+{% endblock %}

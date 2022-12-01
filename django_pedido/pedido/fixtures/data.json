@@ -1,0 +1,43 @@
+[
+    {
+        "model": "pedido.Conductor",
+        "pk": 1,
+        "fields": {
+                "numero": 1,
+                "nombre": "Fernel",
+                "apellido": "Muñoz",
+                "estado":  1                   
+        }
+    },
+    {
+        "model": "pedido.Conductor",
+        "pk": 2,
+        "fields": {
+                "numero": 2,
+                "nombre": "David",
+                "apellido": "Bedoya",
+                "estado":  1
+                               
+        }
+    },
+    {
+        "model": "pedido.Conductor",
+        "pk": 3,
+        "fields": {
+                "numero": 3,
+                "nombre": "Pedro",
+                "apellido": "Perez",
+                "estado":  1                
+        }
+    },
+    {
+        "model": "pedido.Conductor",
+        "pk": 4,
+        "fields": {
+                "numero": 4,
+                "nombre": "Pablo",
+                "apellido": "Marmol",
+                "estado":  1
+        }
+    }
+]

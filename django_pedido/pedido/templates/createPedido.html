@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Crear Pedidos</h1>
+<div>
+    <form action="/pedido/crear/" method="POST">
+        {% csrf_token %}
+        
+        {{form.as_p}}
+
+        <button>
+            Guardar
+        </button>
+
+    </form>
+    <form action="/pedido/" method="GET">
+        <button>
+            Atras
+        </button>
+    </form>
+</div>
+
+{% endblock %}

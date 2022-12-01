@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Conductores</h1>
+
+<div>
+    <form action="/" method="GET">
+        <button>
+            Atras
+        </button>
+    </form>    
+</div>
+
+<ul>
+    {% for conductor in conductores %}
+    <li>
+        <a href="{% url 'detalleConductor' conductor.id %}">
+            <h3>Conductor: {{conductor.nombre}} - {{conductor.apellido}}</h3>
+        </a>        
+    </li>
+    {% endfor %}
+</ul>
+    
+
+{% endblock %}

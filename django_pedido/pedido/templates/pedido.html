@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Pedidos</h1>
+
+<div>
+    <form action="/pedido/crear/" method="GET">
+        <button>
+            Crear
+        </button>
+    </form>
+    <form action="/" method="GET">
+        <button>
+            Atras
+        </button>
+    </form>    
+</div>
+
+<ul>
+    {% for pedido in pedidos %}
+    <li>
+        <a href="{% url 'detallePedido' pedido.id %}">
+            <h3>Cliente: {{pedido.nombre}} - {{pedido.apellido}}</h3>
+        </a>
+            <p>Correo: {{pedido.correo}}</p>
+            <p>Tel: {{pedido.telefono}}</p>
+        
+    </li>
+    {% endfor %}
+</ul>
+    
+
+{% endblock %}
